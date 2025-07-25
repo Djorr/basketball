@@ -1,0 +1,105 @@
+# Basketball Plugin Configuration
+
+# Debug settings
+debug:
+  enabled: true
+  log_region_checks: true
+
+
+
+# Basketball settings
+basketball:
+  # Basketball item settings
+  item:
+    material: SKULL_ITEM
+    data: 3
+    name: "&6Basketball"
+    lore:
+      - "&7Throw this basketball into the hoop!"
+      - "&7Use Q to throw the ball"
+  
+  # Physics settings
+  physics:
+    # Bounce settings
+    max_bounces: 5
+    bounce_height: 0.8
+    bounce_decay: 0.7
+    
+    # Throw settings
+    throw_velocity: 2.0
+    throw_arc: 0.8
+    
+    # Pickup settings
+    pickup_range: 4.0
+    
+  # Score settings
+  scoring:
+    # Points per basket
+    points_per_basket: 2
+    
+    # Title settings
+    title_duration: 60
+    title_fade_in: 10
+    title_fade_out: 20
+    
+  # Hoop settings
+  hoop:
+    # Hoop detection radius
+    detection_radius: 1.5
+    
+    # Score detection height
+    score_height: 2.0
+    
+    # Hopper settings
+    hopper_search_radius: 20
+    hopper_animation_duration: 40  # ticks (2 seconds)
+    
+    # Backboard settings
+    backboard_material: STAINED_GLASS
+    backboard_data: 11  # Blue glass
+    
+  # Region settings
+  regions:
+    # Default region settings
+    default:
+      # Basketball spawn location (relative to region center)
+      spawn_location:
+        x: 0
+        y: 1
+        z: 0
+        
+      # Left hoop location (relative to region center)
+      left_hoop:
+        x: -10
+        y: 3
+        z: 0
+        
+      # Right hoop location (relative to region center)
+      right_hoop:
+        x: 10
+        y: 3
+        z: 0
+        
+      # Backboard locations
+      left_backboard:
+        x: -10
+        y: 3
+        z: -1
+        
+      right_backboard:
+        x: 10
+        y: 3
+        z: -1
+
+# Messages
+messages:
+  prefix: "&8[&6Basketball&8] "
+  basketball_spawned: "&aA basketball has spawned!"
+  basketball_picked_up: "&aYou picked up a basketball!"
+  basketball_thrown: "&aYou threw the basketball!"
+  basketball_removed: "&cYour basketball was removed as you left the region!"
+  score: "&6&lSCORE! &e+{points} points!"
+  no_basketball: "&cYou don't have a basketball!"
+  no_permission: "&cYou don't have permission to do that!"
+  region_not_found: "&cBasketball region not found!"
+  region_already_exists: "&cBasketball region already exists!" 

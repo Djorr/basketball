@@ -1,0 +1,23 @@
+name: Basketball
+version: 1.0.0
+main: nl.djorr.basketball.BasketballPlugin
+author: Djorr
+description: A simple basketball plugin for Minecraft 1.12.2
+api-version: 1.12.2
+depend: [WorldGuard, WorldEdit, DecentHolograms]
+softdepend: []
+
+commands:
+  basketball:
+    description: Basketball plugin commands
+    usage: /basketball help
+    permission: basketball.admin
+    permission-message: You don't have permission to use this command.
+
+permissions:
+  basketball.admin:
+    description: Allows access to all basketball commands
+    default: op
+  basketball.play:
+    description: Allows players to play basketball
+    default: true 
